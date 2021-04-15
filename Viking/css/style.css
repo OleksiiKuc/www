@@ -1,0 +1,487 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background-color: #0E0E0E;
+}
+
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.section__page {
+    padding: 100px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.active {
+    color: #85CCDC;
+    text-decoration: underline;
+}
+/* Header */
+.header {
+    background-image: url('../images/header.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50px;
+    text-align: center;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(180deg, #0E0E0E 0%, rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
+    transform: rotate(180deg);
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 56px;
+    background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
+.menu__list-item + .menu__list-item {
+    margin-left: 25px;
+}
+
+.menu__list-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+    transition: color .2s linear, text-decoration .2s linear;
+}
+
+.menu__list-link:hover {
+    color: #85CCDC;
+    text-decoration: underline;
+}
+
+.header__img {
+    padding-top: 178px;
+}
+/* End Header */
+
+/* Desc */
+.desc__title {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.desc__inner {
+    display: flex;
+}
+
+.desc__info {
+    width: 375px;
+    margin-right: 50px;
+    flex: none; /* Щоб width працював справно */
+}
+
+.desc__info-item {
+    margin-bottom: 25px;
+}
+
+.desc__info-item span {
+    display: block; /* Щоб спан був з нового рядка */
+}
+
+.desc__lor {
+    width: 775px;
+}
+
+.desc__lor p {
+    margin-bottom: 30px;
+}
+/* End desc */
+
+/* Youtube */
+.youtube {
+    background-image: url('../images/youtube.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.youtube__inner {
+    align-items: center;
+}
+
+.youtube__slogan {
+    text-align: right;
+    padding-top: 404px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    color: #85CCDC;
+}
+
+.youtube__slogan p:first-child {
+    margin-right: 314px;
+}
+
+.youtube__slogan p:last-child {
+    margin-right: 20px;
+}
+
+.youtube__trailer {
+    display: flex;
+    margin-left: 560px;
+}
+
+.youtube__logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 12px;
+}
+
+.youtube__trailer-link {
+    margin-top: 40px;
+    transition: color .2s linear;
+}
+
+.youtube__trailer-link:hover {
+    color: #d4cece;
+}
+/* End YouTube */
+
+/* Seasons */
+.seasons__title {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.seasons__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.seasons__item {
+    margin-bottom: 100px;
+    width: 350px;
+    height: 250px;
+    position: relative;
+}
+
+.seasons__item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(14, 14, 14, 0.8);
+}
+
+.seasons__item-number {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 112px;
+    color: #600E09;
+
+    position: absolute;
+    top: -72px;
+    left: 0;
+    z-index: -1;
+}
+
+.seasons__item-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    position: absolute;
+    top: 38%;
+    left: 26px;
+    z-index: 2;
+
+    opacity: 0;
+    transition: all .2s linear;
+
+    background-color: #0E0E0E;
+    padding: 12px 68px;
+}
+
+.seasons__item:hover .seasons__item-text {
+    opacity: 1;
+}
+/* End Seasons */
+
+/* Hero */
+.hero__title {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.hero__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__slider {
+    max-width: 775px;
+    position: relative;
+}
+
+.slick-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.slick-prev {
+    left: 38px;
+}
+
+.slick-next {
+    right: 38px;
+}
+
+.slick-btn:active, .slick-btn:focus {
+    outline: none;
+}
+
+.hero__slider-content {
+    max-width: 349px;
+}
+
+.hero__content-title {
+    margin-bottom: 44px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    color: #85CCDC;
+}
+
+.hero__content-text {
+    height: 273px;
+}
+
+.hero__content-text p {
+    margin-bottom: 25px;
+}
+/* End Hero */
+
+/* Footer */
+.footer__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+/* End Footer */
+
+/*************************************
+                Season 
+ **************************************/
+/* Header */
+.season__header {
+    background-image: url('../images/season-header.png');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 50px;
+    text-align: center;
+    position: relative;
+}
+
+.season__header-inner {
+    display: flex;
+    padding: 50px 0 56px;
+    background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
+.season__header-img {
+    margin-left: 225px;
+    margin-right: 134px;
+}
+
+.season-menu__list {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 56px;
+    background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
+.season-menu__list-item +.season-menu__list-item {
+    margin-left: 25px;
+}
+
+.season-menu__list-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    
+    transition: color .2s linear, text-decoration .2s linear;
+}
+
+.season-menu__list-link:hover {
+    color: #85CCDC;
+    text-decoration: underline;
+}
+
+.season__description {
+    width: 1383px;
+    background-color: #0E0E0E;  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.season__content {
+    display: flex;
+    padding: 44px 47px 64px 35px;
+}
+
+.season__number {
+    margin-top: 20px;
+    margin-right: 45px;
+    height: 113px;
+    width: 94px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 25px;
+}
+
+.season__number span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.season__text {
+    width: 1158px;
+    text-align: left;
+}
+
+.season__text p:first-child {
+    margin-bottom: 25px;
+}
+/* End Header */
+
+/* Series */
+.series {
+    padding-bottom: 0;
+}
+
+.series__title {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.series__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.series__item {
+    margin-bottom: 100px;
+    width: 350px;
+    height: 250px;
+    position: relative;
+}
+
+.series__item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(14, 14, 14, 0.8);
+}
+
+.series__item-number {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 112px;
+    color: #600E09;
+
+    position: absolute;
+    top: -72px;
+    left: 0;
+    z-index: -1;
+}
+
+.series__item-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    position: absolute;
+    top: 38%;
+    left: 26px;
+    z-index: 2;
+
+    opacity: 0;
+    transition: all .2s linear;
+
+    background-color: #0E0E0E;
+    padding: 12px 68px;
+}
+
+.series__item:hover .series__item-text {
+    opacity: 1;
+}
