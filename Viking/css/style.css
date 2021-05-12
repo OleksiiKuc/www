@@ -94,7 +94,7 @@ ul {
 }
 
 .header__img {
-    padding-top: 178px;
+    padding-top: 17vh;
 }
 /* End Header */
 
@@ -147,7 +147,7 @@ ul {
 
 .youtube__slogan {
     text-align: right;
-    padding-top: 404px;
+    padding-top: 42vh;
     font-style: italic;
     font-weight: 300;
     font-size: 72px;
@@ -302,10 +302,6 @@ ul {
     color: #85CCDC;
 }
 
-.hero__content-text {
-    height: 273px;
-}
-
 .hero__content-text p {
     margin-bottom: 25px;
 }
@@ -343,8 +339,13 @@ ul {
     background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
 }
 
+.menu__container {
+    max-width: 1370px;
+    display: flex;
+    margin: 0 auto;
+}
+
 .season__header-img {
-    margin-left: 225px;
     margin-right: 134px;
 }
 
@@ -485,3 +486,184 @@ ul {
 .series__item:hover .series__item-text {
     opacity: 1;
 }
+/* End Season */
+
+/* Start Media */
+@media (max-width: 1400px) {
+    .menu__list-link {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .header__logo {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* .hero__inner {
+        display: block;   
+    }
+
+    .hero__slider {
+        margin: 0 auto;
+    }
+
+    .hero__slider-content {
+        text-align: center;
+        margin: 0 auto;
+    } */
+    /* season */
+    .season__item {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* youtube */
+    .youtube__slogan {
+        font-size: 57px;
+        line-height: 84px;
+    }
+    .youtube__slogan p:last-child {
+        margin-right: 55px;
+    }
+    .youtube__trailer {
+        margin-left: 480px;
+    }
+}
+ 
+@media (max-width: 992px) {
+    /* desc */
+    .desc__info {
+        width: 290px;
+    }
+     /* youtube */
+    .youtube__slogan {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    .youtube__slogan p:last-child {
+        margin-right: 76px;
+    }
+    .youtube__trailer {
+        margin-left: 460px;
+    }
+}
+
+@media (max-width: 768px) {
+        /* desc */
+    .section__page {
+        padding: 50px 0;
+    }
+    .desc__title {
+        margin-bottom: 50px;
+    }
+    .desc__inner {
+        display: block;
+    }
+    .desc__lor {
+        width: 100%;
+    }
+     /* youtube */
+    .youtube__slogan p:first-child {
+        margin-right: 195px;
+    }
+    .youtube__slogan p:last-child {
+        margin-right: 0;
+    }
+    .youtube__trailer {
+        margin-left: 330px;
+    }
+}
+
+@media (max-width: 650px) {
+    /* header */
+    .menu__list {
+        display: none;
+    }
+    .header__img {
+        padding-top: 38vh;
+    }
+    /* youtube */
+    .youtube__slogan {
+        font-size: 36px;
+        line-height: 51px;
+    }
+    .youtube__slogan p:first-child {
+        margin-right: 195px;
+    }
+    .youtube__slogan p:last-child {
+        margin-right: 51px;
+    }
+    .youtube__trailer {
+        margin-left: 290px;
+        flex-wrap: wrap;
+    }
+    .youtube__trailer-logo {
+        margin-left: 65px;
+        margin-top: 10px;
+    }
+    .youtube__trailer-link {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .youtube__slogan p:first-child {
+        margin-right: 165px;
+    }
+    .youtube__slogan p:last-child {
+        margin-right: 20px;
+    }
+    .youtube__trailer {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 414px) {
+    /* youtube */
+    .youtube__slogan {
+        display: none;
+    }
+    .youtube__trailer {
+        padding-top: 42vh;
+        margin-left: 150px;
+    }
+    .youtube__trailer-logo {
+        margin-left: 55px;
+    }
+    .youtube__trailer-link {
+        margin-right: 26px;
+    }
+}
+
+@media (max-width: 375px) {
+    .youtube__trailer-logo {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .youtube__trailer-logo {
+        margin-left: 30px;
+    }
+}
+ 
+@media (max-width: 320px) {
+    .youtube__trailer {
+        margin-left: 120px;
+    }
+    .youtube__trailer-logo {
+        margin-left: 45px;
+        margin-top: 5px;
+    }
+    .youtube__logo {
+        width: 50px;
+        height: 50px;
+    }
+    .youtube__trailer-link {
+        font-size: 14px;
+    }
+}
+/* End media */
