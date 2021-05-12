@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.intro {
+
+}
+
+.intro__inner {
+    display: flex;
+    border-bottom: 1px solid fade(@gray, 30%);
+    padding-bottom: 120px;
+    padding-top: 100px;
+    background: url("../images/symbols.png") right bottom no-repeat;
+
+    position: relative;
+}
+
+.intro__content {
+    width: 50%;
+}
+
+.intro__subtitle {
+    font-size: 3.2rem;
+    color: @black;
+    font-weight: lighter;
+}
+
+.intro__title {
+    font-size: 4rem;
+    color: @black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.intro__prof {
+    font-size: 1.8rem;
+    color: fade(@black, 70%);
+}
+
+.intro__photo {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    z-index: 1;
+}

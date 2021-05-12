@@ -1,0 +1,84 @@
+// main: ../style.less
+
+.reviews {
+    padding: 7rem 0;
+    background: #332f30 url("../images/reviews-bg.png") center no-repeat;
+    background-size: cover; // Щоб картинка була на весь екран
+
+    position: relative;
+}
+
+.reviews__item {
+    width: 100%;
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.reviews__text {
+    font-size: 1.4rem;
+    color: @white;
+    line-height: 2.2; // міжстрочний 32px
+    text-align: center;
+}
+
+.reviews__author {
+    width: 100%;
+    margin-top: -51px;
+    text-align: center;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__photo {
+    display: block;
+    margin: 0 auto; // вирівнювання по центру
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    border: 4px solid @white;
+}
+
+.reviews__name {
+    font-size: 1.6rem;
+    color: @black;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.reviews__company {
+    font-size: 1.4rem;
+    color: @gray;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.reviews__star {
+    width: 13px;
+    height: 13px;
+
+    &-unactive {
+        opacity: .3;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

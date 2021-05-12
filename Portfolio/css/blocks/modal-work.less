@@ -1,0 +1,104 @@
+// main: ../style.less
+
+.modal-work {
+    display: flex;
+}
+
+.modal-work__preview {
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-work__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0); // Для ідеального вирівнювання по центру
+}
+
+.modal-work__content {
+    width: 35%;
+    padding: 5rem 9.9rem 1.5rem 2.6rem;
+    position: relative;
+}
+
+.modal-work__header {
+    margin-bottom: 3.3rem;
+}
+
+.modal-work__title {
+    font-size: 3.2rem;
+    color: @black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modal-work__info {
+    font-size: 1.8rem;
+    color: @gray;
+    text-transform: uppercase;
+
+    & span {
+        margin: 0 1.5rem;
+    }
+}
+
+.modal-work__client {
+    margin-bottom: 3.3rem;
+}
+
+.modal-work__client-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: @black;
+    margin-bottom: 0.1rem;
+}
+
+.modal-work__client-company {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: @gray;
+}
+
+.modal-work__text {
+    font-size: 1.2rem;
+    color: @gray;
+    line-height: 2;
+    font-weight: lighter;
+    margin-bottom: 13rem;
+}
+
+.modal-work__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.7rem 1.6rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.modal-work__btn {
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: @black;
+    text-transform: uppercase;
+
+    background: none;
+    border: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+
+

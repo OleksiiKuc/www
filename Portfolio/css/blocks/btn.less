@@ -1,0 +1,53 @@
+// main: ../style.less
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    min-width: 170px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    font-family: inherit;
+    color: @gray;
+    background-color: #fff;
+
+    border: 1px solid @gray;
+    border-radius: 1.8em;
+    padding: 1.05em 1.7em;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .2s linear, color .2s linear, border-color .2s linear;
+
+    &:hover,
+    &:focus {
+        background-color: @black;
+        color: @white;
+        box-shadow: 2px 2px 10px fade(#000, 34%); // 2px, 2px - це зміщення по x, y, 10px - це розмиття тіні
+        outline: none;
+        border-color: @black;
+    }
+
+    + .btn { // Якщо йде кнопка + кнопка, то для другої кнопки буде
+            margin-left: 1.5rem;
+    }
+
+
+    // Modificators
+    &--small {
+        padding: 0.6em 1em;
+        min-width: 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: @black;
+        border-width: 3px;
+
+    }
+
+    &--thin {
+        max-width: 140px;
+        font-size: 1.2rem;
+    }
+}

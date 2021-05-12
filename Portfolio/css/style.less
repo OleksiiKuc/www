@@ -1,0 +1,63 @@
+// compress: true
+
+@import "vars";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem; // 1 rem = 10 підкеселів, якщо хочу 16 пікселів, написати 1.6rem
+    color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box; // Всі педінги елементів будуть йти в середину, і не буде мінятись розмір блоку.
+}
+
+
+// Vendor
+@import "vendor/slick";
+
+// Blocks
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/works";
+@import "blocks/work";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/articles";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
+@import "blocks/timeline";
+@import "blocks/progress-bar";
+@import "blocks/contact";
+@import "blocks/form";
+
+
+
+
+// Helpers
+@import "helpers";
+
+
