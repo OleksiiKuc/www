@@ -271,7 +271,6 @@ ul {
     left: 19px;
 }
 
-
 .desc__content-title {
     font-style: normal;
     font-weight: normal;
@@ -280,6 +279,115 @@ ul {
     text-align: left;
     color: var(--color-title);
     margin-bottom: 20px;
+}
+
+.desc__reviews {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    border-bottom: 1px solid rgba(208, 212, 216, .5);
+}
+
+.desc__reviews-title {
+    margin-bottom: 38px;
+}
+
+.desc__images-box {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 73px;
+    position: relative;
+}
+
+.desc__dot {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(236, 184, 76, .75);
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.desc__dot::before {
+    content: "";
+    background: url('../images/line.png') center no-repeat;
+    width: 243px;
+    height: 121px;
+    position: absolute;
+    top: -115px;
+    left: 25px;
+    display: none;
+}
+.desc__dot::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD600;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .2s linear, height .2s linear;
+}
+.desc__dot:hover::after {
+    width: 32px;
+    height: 32px;
+}
+.desc__dot:hover::before {
+    display: block;
+}
+.desc__dot:hover .desc__dot-text {
+    display: block;
+}
+.desc__dot:hover .desc__dot-text--4 {
+    display: block;
+}
+
+.desc__dot--1 {
+    top: 190px;
+    left: 148px;
+}
+
+.desc__dot--2 {
+    top: 188px;
+    left: 495px;
+}
+
+.desc__dot--3 {
+    top: 147px;
+    right: 372px;
+}
+
+.desc__dot--4 {
+    bottom: 28px;
+    right: 299px;
+}
+.desc__dot--4::before {
+    width: 120px;
+    top: -40px;
+    left: 20px;
+    transform: rotateX(180deg);
+}
+
+.desc__dot-text {
+    white-space: nowrap;
+    position: absolute;
+    top: -140px;
+    left: 155px;
+    display: none;
+}
+.desc__dot-text--4 {
+    white-space: nowrap;
+    position: absolute;
+    top: 83px;
+    left: 85px;
+    display: none;
+}
+
+.desc__reviews-text {
+    width: 970px;
+    margin: 53px auto 0;
 }
 /* End Desc */
 
