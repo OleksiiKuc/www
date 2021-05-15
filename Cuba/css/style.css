@@ -105,6 +105,19 @@ ul {
     margin-right: 30px;
 }
 
+.header_fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.header_fixed .menu__list-item:hover {
+    border-bottom: 4px solid var(--color-text);
+}
+
 .menu {
     border-bottom: 1px solid rgba(208, 212, 216, .5);
 }
@@ -118,6 +131,7 @@ ul {
 .menu__list-item {
     padding: 24px 0 20px;
     border-bottom: 4px solid transparent;
+    transition: border .2s linear;
 }
 
 .menu__list-item:hover {
@@ -133,6 +147,49 @@ ul {
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 20px 10px;
+}
+.burger:focus {
+    outline: 0;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-text);
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+    margin-right: 20px;
+}
+
+.burger__item:before,
+.burger__item:after{
+    content: "";
+    height: 100%;
+    position: absolute; 
+    left: 0;
+    z-index: 1;
+    background-color: var(--color-text);
+}
+
+.burger__item:before {
+    width: 22px;
+    top: -8px
+}
+
+.burger__item:after {
+    width: 25px;
+    bottom: -8px;
 }
 /* End Header */
 
@@ -527,4 +584,54 @@ ul {
     color: var(--color-text);
     text-align: center;
     padding: 0 0 32px;
+}
+
+@media (max-width: 991px) {
+
+    /* Nav */
+    .menu {
+        display: none;
+        position: relative;
+    }
+    .menu.show {
+        display: flex;
+    }
+    .menu__list {
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu__list-item {
+        border: none;
+        padding: 10px 0 15px;
+    }
+    .menu__list-item:hover {
+        border: none;
+    }
+    .menu__list-item + .menu__list-item {
+        margin-left: 0;
+    }
+
+    .burger {
+        display: block; 
+        position: relative;
+    }
+
+    .header_fixed {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 200;
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+    .header_fixed.menu {
+        margin-top: 40px;
+    }
+
+    /* Resume */
+    .resume__inner {
+        padding-top: 20px;
+    }
 }
